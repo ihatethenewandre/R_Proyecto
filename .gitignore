@@ -1,0 +1,24 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos generados por Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Variables de entorno con credenciales
+.env
+
+# Bitacoras y datos generados en tiempo de ejecucion
+bitacora/
+espacio_trabajo/
+servidor/datos_farmacia.json
+
+# Archivos del sistema operativo y de los editores
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
