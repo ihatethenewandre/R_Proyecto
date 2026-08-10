@@ -1,0 +1,41 @@
+{
+  "descripcion": "Definicion de los servidores utilizados por el anfitrion. Los marcadores entre llaves se sustituyen en tiempo de ejecucion.",
+  "servidores": [
+    {
+      "clave": "filesystem",
+      "nombre": "Filesystem",
+      "tipo": "stdio",
+      "habilitado": true,
+      "comando": "npx",
+      "argumentos": ["-y", "@modelcontextprotocol/server-filesystem", "{ESPACIO_TRABAJO}"],
+      "notas": "Servidor oficial que expone operaciones sobre el sistema de archivos limitadas al directorio indicado. Requiere Node.js instalado."
+    },
+    {
+      "clave": "git",
+      "nombre": "Git",
+      "tipo": "stdio",
+      "habilitado": true,
+      "comando": "uvx",
+      "argumentos": ["mcp-server-git", "--repository", "{ESPACIO_TRABAJO}"],
+      "notas": "Servidor oficial que expone operaciones sobre un repositorio Git. Requiere la herramienta uv instalada y que el directorio sea un repositorio."
+    },
+    {
+      "clave": "farmacia",
+      "nombre": "Farmacia",
+      "tipo": "stdio",
+      "habilitado": true,
+      "comando": "{PYTHON}",
+      "argumentos": ["{RAIZ}/servidor/servidor_local.py"],
+      "notas": "Servidor propio de la cadena de farmacias sobre el transporte stdio. Corresponde a la primera parte de la entrega."
+    },
+    {
+      "clave": "remota",
+      "nombre": "Farmacia remota",
+      "tipo": "http",
+      "habilitado": false,
+      "url": "{URL_MCP_REMOTO}",
+      "encabezados": {},
+      "notas": "Mismo servidor propio sobre Streamable HTTP. Corresponde a la segunda parte de la entrega, habilitar despues de definir URL_MCP_REMOTO."
+    }
+  ]
+}
