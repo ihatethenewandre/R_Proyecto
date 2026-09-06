@@ -32,7 +32,7 @@
       "clave": "remota",
       "nombre": "Farmacia remota",
       "tipo": "http",
-      "habilitado": false,
+      "habilitado": true,
       "url": "{URL_MCP_REMOTO}",
       "encabezados": {},
       "notas": "Mismo servidor propio sobre Streamable HTTP. Corresponde a la segunda parte de la entrega, habilitar despues de definir URL_MCP_REMOTO."
