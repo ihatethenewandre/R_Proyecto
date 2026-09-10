@@ -78,7 +78,9 @@ class Chatbot:
                     al_texto(texto)
 
             usos = self.llm.extraer_usos(respuesta)
-            if respuesta.get("stop_reason") != "tool_use" or not usos:
+            # Se decide por la presencia de bloques tool_use y no por stop_reason, ya que algunos servidores
+            # compatibles con la API, como los modelos locales, no siempre reportan ese campo de forma exacta
+            if not usos:
                 break
 
             resultados = []
