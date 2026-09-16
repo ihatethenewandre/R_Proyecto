@@ -17,6 +17,10 @@ bitacora/
 espacio_trabajo/
 servidor/datos_farmacia.json
 
+# Capturas de trafico y archivos de claves de sesion TLS
+*.pcapng
+*.log
+
 # Archivos del sistema operativo y de los editores
 .DS_Store
 Thumbs.db
